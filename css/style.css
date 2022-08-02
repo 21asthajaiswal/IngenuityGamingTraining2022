@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1em;
+    font-family: sans-serif;
+    color: rgb(108, 74, 190);
+    background-color: rgb(233, 233, 222);
+  }
+  table,th,td {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  th,td {
+    text-align: center;
+    padding: 10px;
+  }
+  th {
+    text-align: center;
+  }
+  body{
+      background-color: rgb(236, 182, 190);
+
+  }
+  .footer {
+    border-color: inherit;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+  }
+  
