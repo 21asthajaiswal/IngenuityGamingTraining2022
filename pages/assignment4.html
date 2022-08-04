@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Practical 8</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <style>
+    * {
+      font-family: Arial;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 45px;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+    }
+
+    .navbar {
+      margin-bottom: 50px;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      width: 1210px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-left: 60px;
+      margin-right: 60px;
+      color: white;
+      height: 70px;
+      background-color: grey;
+    }
+
+    lefttop {
+
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .tabs {
+      text-align: center;
+      color: white;
+      width: 200px;
+      padding: 20px;
+    }
+
+    .tabs:hover {
+      padding: 20px;
+      color: black;
+      background-color: white;
+    }
+
+    .banner {
+      margin-top: 80px;
+      background-image: url('../image/camera.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      color: white;
+      margin-left: 60px;
+      margin-right: 60px;
+      height: 680px;
+      background-color: #76D1D1;
+    }
+
+    .section1 {
+      display: inline-flex;
+      height: 200px;
+      margin-top: 20px;
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-bottom: 90px;
+    }
+
+    .circle {
+      color: white;
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      margin-left: 25px;
+      margin-right: 25px;
+      background-color: #E3E02F;
+      background-size: cover;
+    }
+
+    .section2 {
+      margin-top: 20px;
+      display: inline-flex;
+      height: 550px;
+      margin-top: 20px;
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-bottom: 20px;
+    }
+
+    #left-content>h3 {
+      color: white;
+      text-align: left;
+      margin: 10px 5px;
+    }
+
+    .left {
+      float: left;
+      display: block;
+      font-size: 19px;
+      padding: 10px;
+      text-align: justify;
+      line-height: 28px;
+      display: flex;
+      color: white;
+      width: 600px;
+      margin-right: 10px;
+      background-color: grey;
+    }
+
+    .right {
+      width: 600px;
+
+    }
+
+    .cont {
+      width: 90%;
+      margin: auto;
+    }
+
+    .article {
+      background-size: cover;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      height: 31%;
+      margin-bottom: 20px;
+      background-color: #FFAE38;
+    }
+
+    .section3 {
+      margin-top: 20px;
+      display: inline-flex;
+      height: 350px;
+      margin-left: 75px;
+      margin-bottom: 20px;
+
+    }
+
+    .square>p {
+      padding: 5px;
+      text-align: justify;
+    }
+
+    .square {
+      color: white;
+      width: 250px;
+      margin-left: 30px;
+      margin-right: 10px;
+      background-color: silver;
+    }
+
+    img {
+      width: 100%;
+      height: 150px;
+    }
+
+    .button {
+      display: block;
+      margin-top: 18px;
+      font-family: sans-serif;
+      border-radius: 10px;
+      height: 40px;
+      background-color: red;
+      text-align: center;
+      padding-top: 12px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .button:hover {
+      background-color: blue;
+    }
+
+    .main-content {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: grey;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #26272b;
+    }
+
+    .sec-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 10px;
+    }
+
+    .about {
+      width: 40%;
+    }
+
+    .sec-1 h2 {
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .about p {
+      text-align: justify;
+      color: grey;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+
+    .sec-1 ul {
+      list-style: none;
+    }
+
+    .sec-1 ul li {
+      padding: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+
+    a:hover {
+      color: orange;
+    }
+
+    span {
+      color: grey;
+    }
+
+    i {
+      color: grey;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .sec-2 {
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+      align-items: center;
+    }
+
+    .sec-2 p {
+      color: gray;
+      font-size: 24px;
+      padding: 0;
+    }
+
+    .sec-2 a {
+      display: inline-block;
+      padding: 10px 25px;
+      color: white;
+      background-color: red;
+      margin-left: 10px;
+      border-radius: 20px;
+      font-size: 22px;
+    }
+
+    .sec-2 a:hover {
+      background-color: orange;
+    }
+
+    .sec-3 {
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+    }
+
+    .sec-3 ul {
+      list-style: none;
+    }
+
+    .sec-3 ul li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+      background-color: #424242;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .sec-3 ul li i {
+      color: white;
+      font-size: 24px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .sec-3 ul li:nth-child(1):hover {
+      background-color: #3b5999;
+    }
+
+    .sec-3 ul li:nth-child(2):hover {
+      background-color: #55acee;
+    }
+
+    .sec-3 ul li:nth-child(3):hover {
+      background-color: #dd4b39;
+    }
+
+    .sec-3 ul li:nth-child(4):hover {
+      background-color: #0077b5;
+    }
+
+    .sec-3 ul li:nth-child(5):hover {
+      background-color: #ea4c89;
+    }
+
+    .sec-4 {
+      display: flex;
+      background-color: black;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .sec-4 p {
+      color: grey;
+      position: relative;
+    }
+
+    .sec-4 p::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: yellow;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      transition: all 0.3s;
+    }
+
+    .sec-4 p:hover::after {
+      width: 100%;
+    }
+
+    hr {
+      opacity: 0.2;
+    }
+
+    @media (max-width: 767px) {
+      .main-content {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: grey;
+      }
+
+      footer {
+        width: 100%;
+        background-color: #26272b;
+      }
+
+      .sec-1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 30px 10px;
+      }
+
+      .about {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .sec-1 h2 {
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .about p {
+        text-align: justify;
+        color: grey;
+        line-height: 24px;
+        margin-top: 10px;
+      }
+
+      .sec-1 ul {
+        list-style: none;
+      }
+
+      .sec-1 ul li {
+        padding: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      a:hover {
+        color: orange;
+      }
+
+      span {
+        color: grey;
+      }
+
+      i {
+        color: grey;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .sec-2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .sec-2 p {
+        color: gray;
+        font-size: 24px;
+        padding: 0;
+      }
+
+      .sec-2 a {
+        display: inline-block;
+        padding: 10px 25px;
+        color: white;
+        background-color: red;
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: 22px;
+      }
+
+      .sec-2 a:hover {
+        background-color: orange;
+      }
+
+      .sec-3 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .sec-3 ul {
+        list-style: none;
+        margin: 20px;
+      }
+
+      .sec-3 ul li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background-color: #424242;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .sec-3 ul li i {
+        color: white;
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .sec-3 ul li:nth-child(1):hover {
+        background-color: #3b5999;
+      }
+
+      .sec-3 ul li:nth-child(2):hover {
+        background-color: #55acee;
+      }
+
+      .sec-3 ul li:nth-child(3):hover {
+        background-color: #dd4b39;
+      }
+
+      .sec-3 ul li:nth-child(4):hover {
+        background-color: #0077b5;
+      }
+
+      .sec-3 ul li:nth-child(5):hover {
+        background-color: #ea4c89;
+      }
+
+      .sec-4 {
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        padding: 30px;
+      }
+
+      .sec-4 p {
+        color: grey;
+        position: relative;
+      }
+
+      .sec-4 p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: yellow;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+
+      .sec-4 p:hover::after {
+        width: 100%;
+      }
+
+      hr {
+        opacity: 0.2;
+      }
+    }
+
+    @media (max-width: 499px) {
+      .main-content {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: grey;
+      }
+
+      footer {
+        width: 100%;
+        background-color: #26272b;
+      }
+
+      .sec-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 10px;
+      }
+
+      .about {
+        width: 100%;
+      }
+
+      .sec-1 h2 {
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
+
+      .about p {
+        text-align: justify;
+        color: grey;
+        line-height: 24px;
+        margin-top: 10px;
+      }
+
+      .sec-1 ul {
+        list-style: none;
+      }
+
+      .sec-1 ul li {
+        padding: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      a:hover {
+        color: orange;
+      }
+
+      span {
+        color: grey;
+      }
+
+      i {
+        color: grey;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .sec-2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .sec-2 p {
+        color: gray;
+        font-size: 24px;
+        padding: 0;
+      }
+
+      .sec-2 a {
+        display: inline-block;
+        padding: 10px 25px;
+        color: white;
+        background-color: red;
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: 22px;
+      }
+
+      .sec-2 a:hover {
+        background-color: orange;
+      }
+
+      .sec-3 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .sec-3 ul {
+        list-style: none;
+
+      }
+
+      .sec-3 ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color: #424242;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .sec-3 ul li i {
+        color: white;
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .sec-3 ul li:nth-child(1):hover {
+        background-color: #3b5999;
+      }
+
+      .sec-3 ul li:nth-child(2):hover {
+        background-color: #55acee;
+      }
+
+      .sec-3 ul li:nth-child(3):hover {
+        background-color: #dd4b39;
+      }
+
+      .sec-3 ul li:nth-child(4):hover {
+        background-color: #0077b5;
+      }
+
+      .sec-3 ul li:nth-child(5):hover {
+        background-color: #ea4c89;
+      }
+
+      .sec-4 {
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        padding: 30px;
+      }
+
+      .sec-4 p {
+        color: grey;
+        position: relative;
+      }
+
+      .sec-4 p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: yellow;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+
+      .sec-4 p:hover::after {
+        width: 100%;
+      }
+
+      hr {
+        opacity: 0.2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul style="display:inline-flex">
+      <a href="#" class="tabs" style="text-decoration:none"><b>HOME</b></a>
+      <a href="#section2" class="tabs" style="text-decoration:none"><b>ABOUT US</b></a>
+      <a href="#section1" class="tabs" style="text-decoration:none"><b>TEAM</b></a>
+      <a href="#section3" class="tabs" style="text-decoration:none"><b>TECHNOLOGIES</b></a>
+      <a href="#section4" class="tabs" style="text-decoration:none"><b>CONTACT</b></a>
+    </ul>
+  </div>
+  <div class="banner">
+    <div class="centered">
+      <h1 style="color: yellow; padding:25px;">
+        Camera World
+      </h1>
+    </div>
+  </div>
+  <a id="section1"></a>
+  <h1 style="margin-top:90px"><b>Team Members</b></h1>
+  <div class="section1">
+    <div class="circle" style="background-image: url('../image/men1.jpg')">
+
+    </div>
+    <div class="circle" style="background-image: url('../image/men2.jpg')">
+
+    </div>
+    <div class="circle" style="background-image: url('../image/men3.jpg')">
+
+    </div>
+    <div class="circle" style="background-image: url('../image/men4.jpg')">
+
+    </div>
+  </div>
+  <a id="section2"></a>
+  <h1><b>About Us</b></h1>
+  <div class="section2">
+    <div class="left">
+      <div id="left-content">
+        <h3>About Projects</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus aliquid omnis doloremque eos nesciunt,
+          ab, accusantium temporibus ullam odit deserunt dolores a quis placeat? Veritatis, enim! Vero, nihil quasi
+          voluptatum cupiditate eaque explicabo consectetur sit similique, eius, placeat cumque eum id voluptates
+          inventore eveniet. Repellendus cupiditate ab ex? Doloribus soluta explicabo, atque voluptatum architecto ex
+          consequatur quisquam. Modi rem sint, accusamus dolorum fugit ad eos iste sapiente ullam blanditiis eligendi,
+          impedit deleniti quaerat obcaecati. Sequi dolorem incidunt nostrum pariatur architecto porro, odit placeat
+          commodi nam, consectetur, hic a fuga magnam laboriosam id ducimus perspiciatis vel recusandae deserunt quasi
+          delectus nulla?
+      </div>
+    </div>
+    <div class="right">
+      <div class="article" style="background-image: url('../image/project1.jpg') ;  ">
+        <h2 style="color: yellow;"><b>Project-1</b></h2>
+      </div>
+      <div class="article" style="background-image: url('../image/project2.webp') ; ">
+        <h2 style="color: yellow;"><b>Project-2</b></h2>
+      </div>
+      <div class="article" style="background-image: url('../image/project3.jpg'); ">
+        <h2 style="color: yellow;"><b>Project-3</b></h2>
+      </div>
+    </div>
+  </div>
+  <br>
+  <a id="section3"></a>
+  <h1 style="margin-top:90px"><b>Technologies Used</b></h1>
+  <div class="section3">
+    <div class="square">
+      <div class="image">
+        <img src="../image/h1.jpg" alt="">
+      </div>
+      <h4 style="text-align:center; color:black">Best free photography themes</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+      <a href="../image/h1.jpg" class="button">
+        <span><b>Read More</b></span>
+      </a>
+    </div>
+    <div class="square">
+      <div class="image">
+        <img src="../image/c2.jpg" alt="">
+      </div>
+      <h4 style="text-align:center; color:black">Photography site kit</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+      <a href="../image/c2.jpg" class="button">
+        <span><b>Read More</b></span>
+      </a>
+    </div>
+    <div class="square">
+      <div class="image">
+        <img src="../image/j2.jpg" alt="">
+      </div>
+      <h4 style="text-align:center; color:black">Source code</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+      <a href="../image/j2.jpg" class="button">
+        <span><b>Read More</b></span>
+      </a>
+    </div>
+    <div class="square">
+      <div class="image">
+        <img src="../image/b2.jpg" alt="">
+      </div>
+      <h4 style="text-align:center; color:black">Studio</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+      <a href="../image/b2.jpg" class="button">
+        <span><b>Read More</b></span>
+      </a>
+    </div>
+  </div>
+  <br>
+
+
+  <a id="section4"></a>
+
+  <section class="main-content">Content Area</section>
+  <div class="cont">
+    <footer>
+      <section class="sec-1">
+        <section class="about">
+          <h2>About</h2>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloribus error ad dicta nemo
+            blanditiis! Numquam, aspernatur eaque vel repudiandae tempora ipsum rem excepturi incidunt vero laudantium
+            placeat sed corporis distinctio? Voluptate voluptatibus mollitia commodi dolorem, est, doloremque nihil qui
+            debitis reprehenderit consequuntur, accusamus numquam eveniet perferendis iure? Veniam quae maiores atque
+            voluptatum odit ut quam aspernatur facilis placeat quo.</p>
+        </section>
+        <section class="link1">
+          <h2>Categories</h2>
+          <ul>
+            <li><a href="#">C</a></li>
+            <li><a href="#">UI Desing</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Hybrid Apps</a></li>
+          </ul>
+        </section>
+        <section class="link2">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </section>
+        <section class="link3">
+          <h2>Contact Us</h2>
+          <ul>
+            <li>
+              <i class="fa fa-home"></i> <span>Allahabad U.P,india</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>abcd@gmail.com</span>
+            </li>
+            <li>
+              <i class="fa fa-phone-square"></i>
+              <span>Mobile: 1234567892</span>
+            </li>
+            <li>
+              <i class="fa fa-facebook-official"></i>
+              <a href="#">abcds</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <hr width="100%" noshade />
+      <section class="sec-2">
+        <p>Register for Free</p>
+        <a href="#">signup!</a>
+      </section>
+      <hr width="100%" noshade />
+      <section class="sec-3">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+          </li>
+        </ul>
+      </section>
+      <section class="sec-4">
+        <p>
+          Copyright © 2020 All Rights Reserved by
+          <a href="https://www.beta-labs.in">Beta-Labs.</a>
+        </p>
+      </section>
+    </footer>
+  </div>
+
+</body>
+
+</html>
