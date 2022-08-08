@@ -19,8 +19,8 @@ h1 {
     text-align: center;
   }
   body{
-      background-color: rgb(236, 182, 190);
-
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 6%, rgba(91,80,203,1) 46%, rgba(29,253,168,0.8883928571428571) 68%, rgba(34,46,251,1) 83%, rgba(252,176,69,1) 100%);
   }
   .footer {
     border-color: inherit;
