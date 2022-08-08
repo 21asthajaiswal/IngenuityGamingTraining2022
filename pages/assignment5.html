@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .sky{
+        width: 100%;
+        height:100vh;
+        background-image: url(https://img.freepik.com/free-photo/cloud-sky-twilight-times_74190-4017.jpg?w=2000);
+         position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+background-size: cover;
+    }
+    .highway{
+        height: 200px;
+        width: 300%;
+        background-image: url(https://lh6.googleusercontent.com/gsk2AexRDhHxDd8AEdOIT53OM6vsQLzkDtgxw_DLef4w451cY565je-tiCpu5EC3G2xJDGYZWTXOK7I=w1349-h657);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        animation: highway 5s linear infinite;
+        background-size: cover;
+
+    }
+    @keyframes highway 
+    {
+     100%{
+        transform:translateX(-1500px);   
+    }
+}
+    .city{
+        width: 300%;
+        height: 200px;
+        background-image: url(https://lh3.googleusercontent.com/VD4EoAA_uXM3CPpQEQ52oDHiINKRqiwk7SGGoDKGtlgVsucRvaBpctPzB1kQUGEv-X30ZYrah2wHqII=w1349-h657);
+        position: absolute;
+        bottom: 200px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        animation: city 5s linear infinite;
+    }
+    @keyframes city 
+    {
+     100%{transform:translateX(-150px);   
+    }}
+    .car{
+        width: 400px;
+        height: 170px;
+        z-index: 2;
+        position: absolute;
+        left: 35%;
+        transform: translateX(-50px);
+        bottom: 100px;
+       }
+    .car img{
+        width: 100%;
+        animation: car 1s linear infinite;
+    }
+    .wheel1{
+       
+        position:absolute;
+        left: 52%;
+        transform: translateX(-50px);
+        bottom: 185px;
+        z-index: 2;
+       
+    }
+    .wheel1 img{
+        width: 60px;
+        height: 60px;
+        animation: wheel 1s linear infinite;
+
+    }
+    .front-wheel{
+        position: absolute;
+        left: 63px;
+    }
+    .back-wheel{
+        position: absolute;
+        left: -172px;
+    }
+    @keyframes wheel {
+        100%{
+            transform: rotate(360deg);
+        }
+        
+    }
+    @keyframes car {
+        0%{
+            transform: translateY(-8px);
+        }
+        50%{
+            transform: translateY(0px);
+        }
+        100%{
+            transform: translateY(3px);
+        }
+    }
+
+
+</style>
+<body>
+    
+        <div class="sky">
+        <div class="highway"></div>
+        <div class="city"></div>
+        <div class="car">
+            <img src="../image/istockphoto-186817186-612x612-removebg-preview.png" alt="">
+        </div>
+        <div class="wheel1">
+            <img src="https://lh6.googleusercontent.com/mTVt6rJoGYfU-KAty2hejhaDY0MvIA3lTSKA6W8epkI6Y9zZQc4ZEcd83Gi28daY2TQMNf314yAVYfQ=w1349-h657" class="front-wheel"alt="wheel1">
+            <img src="https://lh6.googleusercontent.com/mTVt6rJoGYfU-KAty2hejhaDY0MvIA3lTSKA6W8epkI6Y9zZQc4ZEcd83Gi28daY2TQMNf314yAVYfQ=w1349-h657" class="back-wheel" alt="wheel2">
+        </div>
+    </div>
+</body>
+</html>
