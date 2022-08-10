@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 </title>
+    <style>
+        .box1 {
+            padding: 20px;
+            margin: auto;
+            width: 60%;
+            height: 60vh;
+
+            /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUuq7t2hfjELSSkAMtbQ13bX1ryGYTz3FkMw&usqp=CAU); */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body style="background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 10%, rgba(70,252,210,1) 99%);">
+    <h1 id="won" style="text-align:center; font-size: 30px; background-color: blue; color: aliceblue;padding: 20px;">
+    </h1>
+    <div class="box1" id="b1"></div>
+    <script>
+        //var x = prompt("Enter the number between 1 to 10");
+        const random = Math.floor(Math.random() * 10) + 1;
+        for (var i = 0; i < 3; i++) {
+            var number = parseInt(prompt("Guess a number from 1 to 10"));
+            if (number == random) {
+                document.getElementById("won").innerHTML = "User Won";
+                document.getElementById("b1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEaVf0bvcz8RR2E02BtEwn29T56w_EwJON7A&usqp=CAU')";
+       
+                
+                break;
+            }
+            else {
+                alert("Your gusse was incorrect Please enter the number");
+            }
+        }
+        if (i == 3) {
+            document.getElementById("won").innerHTML = "User lose";
+            document.getElementById("b1").style.backgroundImage = "url('https://images.unsplash.com/photo-1612436395449-279ee9a6afd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9zZXJ8ZW58MHx8MHx8&w=1000&q=80')";
+        }
+    </script>
+</body>
+
+</html>
