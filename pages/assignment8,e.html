@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cs {
+      background-color: rgb(28, 28, 87);
+      color: aqua;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+  </style>
 </head>
-<body>
-    <h2 style="text-align: center; padding: 10px;">Write a code to sort the string in descending order.</h2>
-    <h3 style="text-align: center;"  >Original String:-  <span id="or" style="font-size: 20px;"></span></h3>
-    <h3 style="text-align: center;">descending order of String:-  <span id="resu" style="font-size: 20px;"></span></h3>
-    <script>
- 
-        
-   
-        function descOrder(s) {
-          s.sort().reverse();
-          str1 = s.join("");
-        
-          document.getElementById('resu').innerHTML=str1;
-        }
-        var s=prompt('Enter the String for  dec Sorting');
-        document.getElementById('or').innerHTML=s;
-    
-        s = s.split("");
-       
-      
-        descOrder(s);
-         
-   </script>
+
+<body style="background: rgb(109, 98, 171);
+background: radial-gradient(circle, rgba(98,161,171,1) 0%, rgba(21,2,243,1) 100%);">
+  <h2
+    style="text-align: center; padding: 10px; background-color: rgb(0, 0, 50);color: aqua;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    Write a code to sort the string in descending order.</h2>
+  <div class="cs">
+    <h3 style="text-align: center;">Original String:- <span id="or" style="font-size: 20px;"></span></h3>
+    <h3 style="text-align: center;">descending order of String:- <span id="resu" style="font-size: 20px;"></span></h3>
+  </div>
+  <script>
+
+
+
+    function descOrder(s) {
+      s.sort().reverse();
+      str1 = s.join("");
+
+      document.getElementById('resu').innerHTML = str1;
+    }
+    var s = prompt('Enter the String for  dec Sorting');
+    document.getElementById('or').innerHTML = s;
+
+    s = s.split("");
+
+
+    descOrder(s);
+
+  </script>
 </body>
+
 </html>
