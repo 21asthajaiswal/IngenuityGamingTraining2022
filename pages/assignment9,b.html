@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        .box{
+            justify-content: center;
+            align-items: center;
+            padding-top: 230px;
+            padding-left: 150px;
+            
+        }
+    </STYle>
+</head>
+<body  style="background: rgb(14,10,85);
+background: linear-gradient(90deg, rgba(14,10,85,1) 0%, rgba(13,13,162,1) 11%, rgba(0,212,255,1) 100%);">
+ <div class="box">
+   <I> <h2 style="text-align: center;padding: 10px; ">Return value:-    <span id="re"></span></h2></div></I>
+    <script>
+        function getNames() {
+
+            let firstName = 'Astha Jaiswal',
+            age = 20;
+
+
+  return {
+    firstName,
+    age
+  };
+}
+ var r=getNames();
+
+ document.getElementById('re').innerHTML=(`${r.firstName} ${r.age}`);
+ 
+ 
+
+    </script>
+</body>
+</html>
