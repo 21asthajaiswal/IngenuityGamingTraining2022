@@ -10,7 +10,7 @@
 background: linear-gradient(90deg, rgba(93,8,107,1) 0%, rgba(162,13,146,1) 31%, rgba(255,0,104,1) 100%);">
  
     <h2 style="text-align: center; padding: 20px; "> Write a Program to Filter out people whose age is less than 25 in descending order. </h2>
-
+     <h2 > Result:-   <span id="me"></span></h2>
     <script>
 
       var people = [
@@ -21,8 +21,9 @@ background: linear-gradient(90deg, rgba(93,8,107,1) 0%, rgba(162,13,146,1) 31%, 
        { name: "Jay", age: 19 }
       ];
       var bigpeop=people.filter((ag1)=>ag1.age<25).sort();
-      document.write((JSON.stringify(bigpeop, null, 4)));
-      console.log(bigpeop);
+     // document.write((JSON.stringify(bigpeop, null, 4)));
+      document.getElementById('me').innerHTML=JSON.stringify(bigpeop, null, 4);
+      //console.log(bigpeop);
 
       
     </script>
