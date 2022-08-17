@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background: rgb(93,8,107);
+background: linear-gradient(90deg, rgba(93,8,107,1) 0%, rgba(162,13,146,1) 31%, rgba(255,0,104,1) 100%);">
+   
     <h1>Write a Program to call a function in an interval of 3 sec for 5 times</h1>
     <script>
         var i=0;
@@ -14,7 +16,7 @@
         {
             document.write(" Called Function ");
             i++;
-            document.write("  call "+i+" Time  ");
+            document.write("  call "+i+" Time  <br> ");
             if(i==5)
             {
                 clearInterval(c);
