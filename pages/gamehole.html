@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WHAKE A MOLE GAME</title>
     <link rel="stylesheet" href="../css/stylegame.css" />
-    <!-- <link rel="stylesheet" href="dom.js" /> -->
-    
   </head>
-  <body>
+  <body>`
     <h1>WHAKE A MOLE</h1>
     <img src="../image/mole.png" id="mole" />
     <img src="../image/dirt.svg" id="mud" />
-    <button type="button" id="start" onclick="start()">START</button>
+    <button type="button" id="start" onclick="start() ; play()">START</button>
 
     <img src="../image/dirt.svg" id="dirt1" class="dirt" />
-    <img src="../image/dirt.svg" id="dirt2" class="dirt"  />
-    <img src="../image/dirt.svg" id="dirt3" class="dirt"  />
-    <img src="../image/dirt.svg" id="dirt4" class="dirt"  />
-    <img src="../image/dirt.svg" id="dirt5" class="dirt"  />
-    <img src="../image/dirt.svg" id="dirt6" class="dirt"  />
+    <img src="../image/dirt.svg" id="dirt2" class="dirt" />
+    <img src="../image/dirt.svg" id="dirt3" class="dirt" />
+    <img src="../image/dirt.svg" id="dirt4" class="dirt" />
+    <img src="../image/dirt.svg" id="dirt5" class="dirt" />
+    <img src="../image/dirt.svg" id="dirt6" class="dirt" />
 
-    <img src="../image/mole.png" id="mole1" class="mole" onclick="point()" />
-    <img src="../image/mole.png" id="mole2" class="mole" onclick="point()" />
-    <img src="../image/mole.png" id="mole3" class="mole" onclick="point()"/>
-    <img src="../image/mole.png" id="mole4" class="mole" onclick="point()"/>
-    <img src="../image/mole.png" id="mole5" class="mole" onclick="point()"/>
-    <img src="../image/mole.png" id="mole6" class="mole" onclick="point()"/>
+    <img src="../image/mole.png" id="mole1" onclick="point()" class="mole" />
+    <img src="../image/mole.png" id="mole2" onclick="point()" class="mole" />
+    <img src="../image/mole.png" id="mole3" onclick="point()" class="mole" />
+    <img src="../image/mole.png" id="mole4" onclick="point()" class="mole" />
+    <img src="../image/mole.png" id="mole5" onclick="point()" class="mole" />
+    <img src="../image/mole.png" id="mole6" onclick="point()" class="mole" />
 
-    <span class="points" style="visibility: hidden;">YOUR POINT :- <span id="score"></span></span>
-    <!-- <span id="currentPoint" class="points">0</span> -->
+    <span class="points">YOUR POINT :-  <span id="score">0</span></span>
+    <span class="points2">Time :-  <span id="score2">0</span></span>
+
+    <span id="currentPoint" class="points">0</span>
 
     <script src="../js/gamescript.js"></script>
   </body>
