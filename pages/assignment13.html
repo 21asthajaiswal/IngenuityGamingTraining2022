@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Function</title>
+    <style>
+     .container{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to right top,blue, deeppink);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .box1{
+            width: 50px;
+            height: 50px;
+            border: 5px solid gray;
+            box-shadow: 5px rgb(63, 61, 61);
+            border-radius: 50%;
+            background-image: linear-gradient(yellow 50%, green 50%);
+            animation: loader 3s linear infinite;
+            
+            
+        }
+        @keyframes  loader {
+            0%{
+                transform: translateY(0) rotate(0deg);
+            }
+
+           50%{
+            transform: translateY(-100px) rotate(180deg);
+           }
+           100%{
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+       .box2{
+            width: 30px;
+            height: 15px;
+            border: 2px solid gray;
+            background-color: rgb(75, 68, 68);
+            border-radius: 50%;
+            animation: aaa 3s linear infinite;
+
+        }
+        @keyframes aaa {
+            0%{
+                opacity: 1;
+                transform: scaleX(2);
+            }
+            50%{
+                opacity: 0.5;
+                transform: scaleX(1);
+            
+            }
+            100%{
+                opacity: 1;
+                transform: scaleX(2) ;
+            }
+           
+        }
+        p{
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+        span{
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+            animation: popup 3s linear infinite;
+        }
+        @keyframes popup 
+        {
+        0%{
+            opacity: 1;
+        }    
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        }
+   
+    .button1{
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+    
+    color: rgb(6, 6, 28);
+    display: none;
+   }
+
+    </style>
+</head>
+<body style="background: rgb(180,113,58);
+background: linear-gradient(90deg, rgba(180,113,58,1) 0%, rgba(253,190,29,1) 51%, rgba(187,252,69,1) 100%);" >
+    <!-- loader -->
+    <div class="container">
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        
+        <p>LOADING <span>. . . .</span></p>
+    </div>
+    <div class="button1">
+    <button onclick="popup()" style="padding:20px;color: rgb(19, 19, 45);background-color:rgb(240, 255, 124);border-radius:20px; font-size: 20px;">Popup Generate</button>
+</div>
+    
+<script>
+  window.onload=function(){
+     var pop=setInterval(()=>
+    {
+        stoploader();
+        clearInterval(pop);
+    },3000);
+};
+function stoploader(){
+    document.querySelector('.container').style.display="none";
+     document.querySelector('.button1').style.display="block";
+
+//clearInterval(pop);
+}
+setTimeout(openpopup, 7000);
+     function openpopup()
+   {
+    
+    var url="./form.html";
+    var Windowsize="height=500 , width=500";
+    var newi=window.open(url,"_blank",Windowsize);
+    console.log("hi");
+    newi.moveTo(500,200);
+    //Interval(pop);
+    
+   }
+
+
+   function popup()
+   {
+    var url="./form.html";
+    var Windowsize="height=500 , width=500";
+    var newi=window.open(url,"_blank",Windowsize);
+    console.log("hi");
+    newi.moveTo(500,200);
+   }
+
+</script>
+
+</body>
+</html>

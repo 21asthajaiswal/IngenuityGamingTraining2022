@@ -1,3 +1,19 @@
+// loader
+window.onload=function(){
+    setInterval(()=>
+       {
+        stoploader();
+       },3000 );
+};
+function stoploader(){
+    document.querySelector('.container').style.display="none";
+    document.querySelector('.conatiner1').style.display="block";
+
+}
+
+
+
+
 var toInput=document.querySelector(".todo-input");
 var btn = document.querySelector("button");
 var todoList=document.querySelector(".todo-list");
@@ -21,11 +37,10 @@ for(var i=0;i<50;i++)
 
     var newLi=document.createElement("li");
     newLi.classList.add("todo_item");
-    //newLi.innerHTML=toInput.value ;
-    //console.log(oo);
+    
      newLi.innerHTML=window.localStorage.getItem(rr) ;
 
-    // document.getElementById("stored").innerHTML= window.localStorage.getItem(oo);
+    
     newDiv.appendChild(newLi);
 
 
