@@ -30,9 +30,9 @@ getApiData(API_URL)
 
 
   function displayData(serverData) {
-    // for(var i=0;i<1;i++)
-    // {
-var i=100;
+    for(var i=0;i<1;i++)
+    var i=29;
+
     
     console.log(serverData.Countries[1].Country);
     document.getElementById("y1").innerHTML=serverData.Countries[i].Country;
@@ -42,4 +42,5 @@ var i=100;
     document.getElementById("y5").innerHTML=serverData.Countries[i].NewConfirmed;
     document.getElementById("y6").innerHTML=serverData.Countries[i].NewDeaths;
    // document.getElementById("y1").innerHTML=serverData.Countries[i].Country;
-    }
+    
+}
