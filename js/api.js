@@ -37,9 +37,9 @@ var i=100;
     console.log(serverData.Countries[1].Country);
     document.getElementById("y1").innerHTML=serverData.Countries[i].Country;
     document.getElementById("y2").innerHTML=serverData.Countries[i].Date;
-    document.getElementById("y3").innerHTML=serverData.Countries[i].NewDeaths;
-    document.getElementById("y4").innerHTML=serverData.Countries[i].TotalConfirmed;
-    document.getElementById("y5").innerHTML=serverData.Countries[i].TotalDeaths;
-    document.getElementById("y6").innerHTML=serverData.Countries[i].NewConfirmed;
+    document.getElementById("y3").innerHTML=serverData.Countries[i].TotalConfirmed;
+    document.getElementById("y4").innerHTML=serverData.Countries[i].TotalDeaths;
+    document.getElementById("y5").innerHTML=serverData.Countries[i].NewConfirmed;
+    document.getElementById("y6").innerHTML=serverData.Countries[i].NewDeaths;
    // document.getElementById("y1").innerHTML=serverData.Countries[i].Country;
     }
